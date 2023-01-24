@@ -1,6 +1,6 @@
-import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReaders';
 
-const reader = new CsvFileReader('football.csv');
+const reader = new MatchReader('football.csv');
 reader.read();
 
 //enum enumeration
