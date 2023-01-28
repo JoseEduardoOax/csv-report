@@ -3,3 +3,6 @@ build/
 
 # Dependency directories
 node_modules/
+
+# Ignore generated html report
+report.html
