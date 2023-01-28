@@ -1,12 +1,9 @@
 import fs from 'fs';
 
-export abstract class CsvFileReader<T> {
-  data: T[] = [];
+export class CsvFileReader {
+  data: string[][] = [];
 
-  constructor(public filename: string) {
-  }
-
-  abstract mapRow(row: string[]): T;
+  constructor(public filename: string) { }
 
   read(): void {
     this.data = fs
@@ -18,6 +15,7 @@ export abstract class CsvFileReader<T> {
         (row: string): string[] => {
           return row.split(',');
         }
-      ).map(this.mapRow);
+      );
   }
 }
+
