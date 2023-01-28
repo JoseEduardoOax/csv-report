@@ -16,6 +16,7 @@ export class MatchReader {
   load(): void {
     this.reader.read();
     this.reader.data.map((row: string[]): MatchData => {
+    this.matches = this.reader.data.map((row: string[]): MatchData => {
       return [
         dateStringToDate(row[0]),
         row[1],
